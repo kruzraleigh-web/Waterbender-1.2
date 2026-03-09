@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waterbender Side-Scroller</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!--
+    Simple UI wrapper.
+    Everything visual in the game is rendered to the canvas,
+    but this top HUD gives instructions + game buttons.
+  -->
+  <div class="game-shell">
+    <header class="top-ui">
+      <h1>Waterbender Training Grounds</h1>
+      <p>
+        WASD move • Space jump • Drag orb with mouse • Release to launch • Shift while dragging = ice
+      </p>
+      <div class="button-row">
+        <button id="restartBtn">Restart</button>
+        <button id="levelUpBtn" disabled>Level Up (after wave)</button>
+      </div>
+    </header>
+
+    <!-- Main canvas where gameplay is drawn -->
+    <canvas id="gameCanvas" width="1200" height="650"></canvas>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
